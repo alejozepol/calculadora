@@ -401,26 +401,39 @@ public class ventana extends javax.swing.JFrame {
 
         }
         if (binario.isSelected() == true) {
-
+            //variables
             int bnum1 = Integer.parseInt(b1.getText());
             int dnum1 = Integer.parseInt(b1.getText(), 2);
             int bnum2 = Integer.parseInt(b2.getText());
             int dnum2 = Integer.parseInt(b2.getText(), 2);
             String bi3;
             int br3;
-            br3 = (dnum1 + dnum1);
-            resultado.setText(String.valueOf(br3));
+            String hr1;
+            String hr2;
+            String hr3;
+            String oc1;
+            String oc2;
+            String oc3;
+            //conversion
+            br3 = (dnum1 + dnum2);
             bi3 = Integer.toBinaryString(br3);
-//            int rd;
-//                   rd =Integer.parseInt(dr.getText(), 2);; 
-//                    Integer.toBinaryString(dr);   
-
+            hr1 = Integer.toHexString(dnum1);
+            hr2 = Integer.toHexString(dnum2);
+            hr3 = Integer.toHexString(br3);
+            oc1 = Integer.toOctalString(dnum1);
+            oc2 = Integer.toOctalString(dnum2);
+            oc3 = Integer.toOctalString(br3);
+            //impresion
+            resultado.setText(String.valueOf(br3));
             numero1.setText(String.valueOf(dnum1));
             numero2.setText(String.valueOf(dnum2));
             rb.setText(String.valueOf(bi3));
-             
-
-//            rb.setText(String.valueOf(rd));
+            h1.setText(String.valueOf(hr1));
+            h2.setText(String.valueOf(hr2));
+            rh.setText(String.valueOf(hr3));
+            o1.setText(String.valueOf(oc1));
+            o2.setText(String.valueOf(oc2));
+            ro.setText(String.valueOf(oc3));
         }
         if (octal.isSelected() == true) {
             double onum1 = Double.parseDouble(o1.getText());
