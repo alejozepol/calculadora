@@ -403,19 +403,23 @@ public class ventana extends javax.swing.JFrame {
         if (binario.isSelected() == true) {
 
             int bnum1 = Integer.parseInt(b1.getText());
-            int dnum1 = Integer.parseInt(b1.getText(), 2);;
+            int dnum1 = Integer.parseInt(b1.getText(), 2);
             int bnum2 = Integer.parseInt(b2.getText());
-            int dnum2 = Integer.parseInt(b2.getText(), 2);;
-            int dr = (dnum1+dnum1);
-             resultado.setText(String.valueOf(dr));
+            int dnum2 = Integer.parseInt(b2.getText(), 2);
+            String bi3;
+            int br3;
+            br3 = (dnum1 + dnum1);
+            resultado.setText(String.valueOf(br3));
+            bi3 = Integer.toBinaryString(br3);
 //            int rd;
 //                   rd =Integer.parseInt(dr.getText(), 2);; 
 //                    Integer.toBinaryString(dr);   
-          
 
             numero1.setText(String.valueOf(dnum1));
             numero2.setText(String.valueOf(dnum2));
-           
+            rb.setText(String.valueOf(bi3));
+             
+
 //            rb.setText(String.valueOf(rd));
         }
         if (octal.isSelected() == true) {
