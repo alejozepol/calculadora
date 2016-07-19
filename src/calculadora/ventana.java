@@ -469,9 +469,36 @@ public class ventana extends javax.swing.JFrame {
         }
 
         if (hexa.isSelected() == true) {
-            double hnum1 = Double.parseDouble(h1.getText());
-            double hnum2 = Double.parseDouble(h2.getText());
-            rh.setText(String.valueOf(hnum1 + hnum2));
+            int dnum1 = Integer.parseInt(h1.getText(), 16);
+            int dnum2 = Integer.parseInt(h2.getText(), 16);
+            String bi3;
+            int br3;
+            String bi1;
+            String bi2;
+            String oc1;
+            String oc2;
+            String hr3;
+            String oc3;
+            //conversion
+            br3 = (dnum1 + dnum2);
+            bi1 = Integer.toBinaryString(dnum1);
+            bi2 = Integer.toBinaryString(dnum2);
+            bi3 = Integer.toBinaryString(br3);
+            oc1 = Integer.toOctalString(dnum1);
+            oc2 = Integer.toOctalString(dnum2);
+            hr3 = Integer.toHexString(br3);
+            oc3 = Integer.toOctalString(br3);
+            //impresion
+            resultado.setText(String.valueOf(br3));
+            numero1.setText(String.valueOf(dnum1));
+            numero2.setText(String.valueOf(dnum2));
+            rb.setText(String.valueOf(bi3));
+            o1.setText(String.valueOf(oc1));
+            o2.setText(String.valueOf(oc2));
+            rh.setText(String.valueOf(hr3));
+            b1.setText(String.valueOf(bi1));
+            b2.setText(String.valueOf(bi2));
+            ro.setText(String.valueOf(oc3));
         }
     }//GEN-LAST:event_sumaActionPerformed
 
@@ -617,9 +644,5 @@ public class ventana extends javax.swing.JFrame {
     private javax.swing.JTextField ro;
     private javax.swing.JButton suma;
     // End of variables declaration//GEN-END:variables
-
-    private String printf(String o, JTextField o1) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
 }
