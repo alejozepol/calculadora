@@ -6,6 +6,7 @@
 package calculadora;
 
 import com.sun.org.apache.xpath.internal.operations.Variable;
+import javax.swing.JTextField;
 
 /**
  *
@@ -402,9 +403,7 @@ public class ventana extends javax.swing.JFrame {
         }
         if (binario.isSelected() == true) {
             //variables
-            int bnum1 = Integer.parseInt(b1.getText());
             int dnum1 = Integer.parseInt(b1.getText(), 2);
-            int bnum2 = Integer.parseInt(b2.getText());
             int dnum2 = Integer.parseInt(b2.getText(), 2);
             String bi3;
             int br3;
@@ -436,10 +435,37 @@ public class ventana extends javax.swing.JFrame {
             ro.setText(String.valueOf(oc3));
         }
         if (octal.isSelected() == true) {
-            double onum1 = Double.parseDouble(o1.getText());
-            double onum2 = Double.parseDouble(o2.getText());
-            ro.setText(String.valueOf(onum1 + onum2));
 
+            int dnum1 = Integer.parseInt(o1.getText(), 8);
+            int dnum2 = Integer.parseInt(o2.getText(), 8);
+            String bi3;
+            int br3;
+            String bi1;
+            String bi2;
+            String hr1;
+            String hr2;
+            String hr3;
+            String oc3;
+            //conversion
+            br3 = (dnum1 + dnum2);
+            bi1 = Integer.toBinaryString(dnum1);
+            bi2 = Integer.toBinaryString(dnum2);
+            bi3 = Integer.toBinaryString(br3);
+            hr1 = Integer.toHexString(dnum1);
+            hr2 = Integer.toHexString(dnum2);
+            hr3 = Integer.toHexString(br3);
+            oc3 = Integer.toOctalString(br3);
+            //impresion
+            resultado.setText(String.valueOf(br3));
+            numero1.setText(String.valueOf(dnum1));
+            numero2.setText(String.valueOf(dnum2));
+            rb.setText(String.valueOf(bi3));
+            h1.setText(String.valueOf(hr1));
+            h2.setText(String.valueOf(hr2));
+            rh.setText(String.valueOf(hr3));
+            b1.setText(String.valueOf(bi1));
+            b2.setText(String.valueOf(bi2));
+            ro.setText(String.valueOf(oc3));
         }
 
         if (hexa.isSelected() == true) {
@@ -591,4 +617,9 @@ public class ventana extends javax.swing.JFrame {
     private javax.swing.JTextField ro;
     private javax.swing.JButton suma;
     // End of variables declaration//GEN-END:variables
+
+    private String printf(String o, JTextField o1) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

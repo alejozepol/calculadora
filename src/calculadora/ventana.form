@@ -223,18 +223,8 @@
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JTextField" name="b1">
-          <Properties>
-            <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-              <ComponentRef name="default"/>
-            </Property>
-          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="b2">
-          <Properties>
-            <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-              <ComponentRef name="default"/>
-            </Property>
-          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="rb">
         </Component>
@@ -283,18 +273,8 @@
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JTextField" name="o1">
-          <Properties>
-            <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-              <ComponentRef name="default"/>
-            </Property>
-          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="o2">
-          <Properties>
-            <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-              <ComponentRef name="default"/>
-            </Property>
-          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="ro">
         </Component>
@@ -363,18 +343,8 @@
         <Component class="javax.swing.JLabel" name="nomh">
         </Component>
         <Component class="javax.swing.JTextField" name="h1">
-          <Properties>
-            <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-              <ComponentRef name="default"/>
-            </Property>
-          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="h2">
-          <Properties>
-            <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-              <ComponentRef name="default"/>
-            </Property>
-          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="rh">
         </Component>
