@@ -6,6 +6,7 @@
 package calculadora;
 
 import com.sun.org.apache.xpath.internal.operations.Variable;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 /**
@@ -31,226 +32,49 @@ public class ventana extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
-        Labels = new javax.swing.JPanel();
-        nomN1 = new javax.swing.JLabel();
-        nomN2 = new javax.swing.JLabel();
-        nomN3 = new javax.swing.JLabel();
-        Decimal = new javax.swing.JPanel();
-        resultado = new javax.swing.JTextField();
-        numero2 = new javax.swing.JTextField();
-        numero1 = new javax.swing.JTextField();
-        decimal = new javax.swing.JRadioButton();
-        Binarios = new javax.swing.JPanel();
-        b1 = new javax.swing.JTextField();
-        b2 = new javax.swing.JTextField();
-        rb = new javax.swing.JTextField();
-        binario = new javax.swing.JRadioButton();
-        Octal = new javax.swing.JPanel();
-        o1 = new javax.swing.JTextField();
-        o2 = new javax.swing.JTextField();
-        ro = new javax.swing.JTextField();
-        octal = new javax.swing.JRadioButton();
-        Hexadecimal = new javax.swing.JPanel();
-        nomh = new javax.swing.JLabel();
-        h1 = new javax.swing.JTextField();
-        h2 = new javax.swing.JTextField();
-        rh = new javax.swing.JTextField();
-        hexa = new javax.swing.JRadioButton();
         Operaciones = new javax.swing.JPanel();
         suma = new javax.swing.JButton();
         resta = new javax.swing.JButton();
         multiplicacion = new javax.swing.JButton();
         division = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
+        Base = new javax.swing.JComboBox<>();
+        Decimal1 = new javax.swing.JPanel();
+        rd = new javax.swing.JTextField();
+        de2 = new javax.swing.JTextField();
+        de1 = new javax.swing.JTextField();
+        Binarios = new javax.swing.JPanel();
+        b1 = new javax.swing.JTextField();
+        b2 = new javax.swing.JTextField();
+        rb = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        Hexadecimal = new javax.swing.JPanel();
+        nomh = new javax.swing.JLabel();
+        h1 = new javax.swing.JTextField();
+        h2 = new javax.swing.JTextField();
+        rh = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        Octal = new javax.swing.JPanel();
+        o1 = new javax.swing.JTextField();
+        o2 = new javax.swing.JTextField();
+        ro = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        Labels1 = new javax.swing.JPanel();
+        nomN4 = new javax.swing.JLabel();
+        nomN5 = new javax.swing.JLabel();
+        nomN6 = new javax.swing.JLabel();
+        Labels = new javax.swing.JPanel();
+        nomN1 = new javax.swing.JLabel();
+        nomN2 = new javax.swing.JLabel();
+        Decimal = new javax.swing.JPanel();
+        entrada2 = new javax.swing.JTextField();
+        entrada1 = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        Labels.setAlignmentX(0.2F);
-        Labels.setAutoscrolls(true);
-
-        nomN1.setText("Numero1");
-
-        nomN2.setText("Numero 2");
-
-        nomN3.setText("Resultado");
-
-        javax.swing.GroupLayout LabelsLayout = new javax.swing.GroupLayout(Labels);
-        Labels.setLayout(LabelsLayout);
-        LabelsLayout.setHorizontalGroup(
-            LabelsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LabelsLayout.createSequentialGroup()
-                .addGroup(LabelsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(LabelsLayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(LabelsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nomN3)
-                            .addGroup(LabelsLayout.createSequentialGroup()
-                                .addGap(3, 3, 3)
-                                .addComponent(nomN1))))
-                    .addGroup(LabelsLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(nomN2)))
-                .addContainerGap(33, Short.MAX_VALUE))
-        );
-        LabelsLayout.setVerticalGroup(
-            LabelsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LabelsLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(nomN1)
-                .addGap(18, 18, 18)
-                .addComponent(nomN2)
-                .addGap(11, 11, 11)
-                .addComponent(nomN3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-
-        buttonGroup1.add(decimal);
-        decimal.setText("Decimal");
-        decimal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                decimalActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout DecimalLayout = new javax.swing.GroupLayout(Decimal);
-        Decimal.setLayout(DecimalLayout);
-        DecimalLayout.setHorizontalGroup(
-            DecimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(DecimalLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(DecimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(numero1)
-                    .addComponent(numero2, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(resultado, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(decimal, javax.swing.GroupLayout.DEFAULT_SIZE, 81, Short.MAX_VALUE))
-                .addGap(18, 18, 18))
-        );
-        DecimalLayout.setVerticalGroup(
-            DecimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(DecimalLayout.createSequentialGroup()
-                .addComponent(decimal, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(numero1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(numero2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(resultado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        buttonGroup1.add(binario);
-        binario.setText("Binario");
-        binario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                binarioActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout BinariosLayout = new javax.swing.GroupLayout(Binarios);
-        Binarios.setLayout(BinariosLayout);
-        BinariosLayout.setHorizontalGroup(
-            BinariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BinariosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(BinariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(b1)
-                    .addGroup(BinariosLayout.createSequentialGroup()
-                        .addComponent(binario)
-                        .addContainerGap(25, Short.MAX_VALUE))
-                    .addComponent(b2)
-                    .addComponent(rb)))
-        );
-        BinariosLayout.setVerticalGroup(
-            BinariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BinariosLayout.createSequentialGroup()
-                .addGap(2, 2, 2)
-                .addComponent(binario, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(b1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(b2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(rb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        buttonGroup1.add(octal);
-        octal.setText("Octal");
-        octal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                octalActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout OctalLayout = new javax.swing.GroupLayout(Octal);
-        Octal.setLayout(OctalLayout);
-        OctalLayout.setHorizontalGroup(
-            OctalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(o1, javax.swing.GroupLayout.Alignment.TRAILING)
-            .addComponent(o2, javax.swing.GroupLayout.Alignment.TRAILING)
-            .addComponent(ro, javax.swing.GroupLayout.Alignment.TRAILING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OctalLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(octal, javax.swing.GroupLayout.DEFAULT_SIZE, 81, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        OctalLayout.setVerticalGroup(
-            OctalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(OctalLayout.createSequentialGroup()
-                .addComponent(octal, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(o1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(11, 11, 11)
-                .addComponent(o2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 23, Short.MAX_VALUE))
-        );
-
-        buttonGroup1.add(hexa);
-        hexa.setText("Hexadecimal");
-        hexa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                hexaActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout HexadecimalLayout = new javax.swing.GroupLayout(Hexadecimal);
-        Hexadecimal.setLayout(HexadecimalLayout);
-        HexadecimalLayout.setHorizontalGroup(
-            HexadecimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(HexadecimalLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(HexadecimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(HexadecimalLayout.createSequentialGroup()
-                        .addComponent(hexa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(11, 11, 11))
-                    .addComponent(h1)
-                    .addComponent(h2)
-                    .addComponent(rh)))
-            .addGroup(HexadecimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(HexadecimalLayout.createSequentialGroup()
-                    .addContainerGap(96, Short.MAX_VALUE)
-                    .addComponent(nomh)
-                    .addContainerGap()))
-        );
-        HexadecimalLayout.setVerticalGroup(
-            HexadecimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(HexadecimalLayout.createSequentialGroup()
-                .addComponent(hexa, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(h1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(h2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(9, 9, 9)
-                .addComponent(rh, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 19, Short.MAX_VALUE))
-            .addGroup(HexadecimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(HexadecimalLayout.createSequentialGroup()
-                    .addGap(6, 6, 6)
-                    .addComponent(nomh)
-                    .addContainerGap(113, Short.MAX_VALUE)))
-        );
+        setTitle("Calculadora");
 
         suma.setText("+");
         suma.addActionListener(new java.awt.event.ActionListener() {
@@ -322,19 +146,142 @@ public class ventana extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(227, 227, 227)
-                .addComponent(Operaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
+        Base.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Decimal", "Binario", "Hexadecimal", "Octal" }));
+        Base.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BaseActionPerformed(evt);
+            }
+        });
+
+        de1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                de1ActionPerformed(evt);
+            }
+        });
+
+        b1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b1ActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setText("Binario");
+
+        javax.swing.GroupLayout BinariosLayout = new javax.swing.GroupLayout(Binarios);
+        Binarios.setLayout(BinariosLayout);
+        BinariosLayout.setHorizontalGroup(
+            BinariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BinariosLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(Labels, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                .addComponent(Decimal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(BinariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(b1, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
+                    .addComponent(b2)
+                    .addComponent(rb)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BinariosLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addGap(26, 26, 26))
+        );
+        BinariosLayout.setVerticalGroup(
+            BinariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BinariosLayout.createSequentialGroup()
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(b1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(b2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(rb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE))
+        );
+
+        jLabel5.setText("Hexadecimal");
+
+        javax.swing.GroupLayout HexadecimalLayout = new javax.swing.GroupLayout(Hexadecimal);
+        Hexadecimal.setLayout(HexadecimalLayout);
+        HexadecimalLayout.setHorizontalGroup(
+            HexadecimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(HexadecimalLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(HexadecimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(h1, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE)
+                    .addComponent(h2)
+                    .addComponent(rh)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HexadecimalLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel5)
+                .addGap(18, 18, 18))
+            .addGroup(HexadecimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(HexadecimalLayout.createSequentialGroup()
+                    .addContainerGap(96, Short.MAX_VALUE)
+                    .addComponent(nomh)
+                    .addContainerGap()))
+        );
+        HexadecimalLayout.setVerticalGroup(
+            HexadecimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(HexadecimalLayout.createSequentialGroup()
+                .addGap(5, 5, 5)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(h1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(h2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(9, 9, 9)
+                .addComponent(rh, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 19, Short.MAX_VALUE))
+            .addGroup(HexadecimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(HexadecimalLayout.createSequentialGroup()
+                    .addGap(6, 6, 6)
+                    .addComponent(nomh)
+                    .addContainerGap(113, Short.MAX_VALUE)))
+        );
+
+        jLabel6.setText("Octal");
+
+        javax.swing.GroupLayout OctalLayout = new javax.swing.GroupLayout(Octal);
+        Octal.setLayout(OctalLayout);
+        OctalLayout.setHorizontalGroup(
+            OctalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(o1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
+            .addComponent(o2, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(ro, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(OctalLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(jLabel6)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        OctalLayout.setVerticalGroup(
+            OctalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(OctalLayout.createSequentialGroup()
+                .addGap(5, 5, 5)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(o1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(11, 11, 11)
+                .addComponent(o2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 23, Short.MAX_VALUE))
+        );
+
+        jLabel2.setText("Decimal");
+
+        javax.swing.GroupLayout Decimal1Layout = new javax.swing.GroupLayout(Decimal1);
+        Decimal1.setLayout(Decimal1Layout);
+        Decimal1Layout.setHorizontalGroup(
+            Decimal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Decimal1Layout.createSequentialGroup()
+                .addGroup(Decimal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Decimal1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(Decimal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(de1, javax.swing.GroupLayout.DEFAULT_SIZE, 81, Short.MAX_VALUE)
+                            .addComponent(de2, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(rd, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addGroup(Decimal1Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel2)
+                        .addGap(31, 31, 31)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Binarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -343,32 +290,194 @@ public class ventana extends javax.swing.JFrame {
                 .addComponent(Octal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
+        Decimal1Layout.setVerticalGroup(
+            Decimal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Decimal1Layout.createSequentialGroup()
+                .addGroup(Decimal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Hexadecimal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Octal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(Decimal1Layout.createSequentialGroup()
+                .addGap(5, 5, 5)
+                .addGroup(Decimal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Binarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(Decimal1Layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(de1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(de2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(rd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel3.setText("Salida");
+
+        Labels1.setAlignmentX(0.2F);
+        Labels1.setAutoscrolls(true);
+
+        nomN4.setText("Numero1");
+
+        nomN5.setText("Numero 2");
+
+        nomN6.setText("Resultado");
+
+        javax.swing.GroupLayout Labels1Layout = new javax.swing.GroupLayout(Labels1);
+        Labels1.setLayout(Labels1Layout);
+        Labels1Layout.setHorizontalGroup(
+            Labels1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Labels1Layout.createSequentialGroup()
+                .addGroup(Labels1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Labels1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(Labels1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(nomN6)
+                            .addGroup(Labels1Layout.createSequentialGroup()
+                                .addGap(3, 3, 3)
+                                .addComponent(nomN4))))
+                    .addGroup(Labels1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(nomN5)))
+                .addContainerGap(33, Short.MAX_VALUE))
+        );
+        Labels1Layout.setVerticalGroup(
+            Labels1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Labels1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(nomN4)
+                .addGap(18, 18, 18)
+                .addComponent(nomN5)
+                .addGap(11, 11, 11)
+                .addComponent(nomN6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        Labels.setAlignmentX(0.2F);
+        Labels.setAutoscrolls(true);
+
+        nomN1.setText("Numero1");
+
+        nomN2.setText("Numero 2");
+
+        entrada1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                entrada1ActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("Entrada");
+
+        javax.swing.GroupLayout DecimalLayout = new javax.swing.GroupLayout(Decimal);
+        Decimal.setLayout(DecimalLayout);
+        DecimalLayout.setHorizontalGroup(
+            DecimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DecimalLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(DecimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(entrada1)
+                    .addComponent(entrada2)
+                    .addGroup(DecimalLayout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)))
+                .addGap(0, 0, 0))
+        );
+        DecimalLayout.setVerticalGroup(
+            DecimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DecimalLayout.createSequentialGroup()
+                .addComponent(jLabel1)
+                .addGap(11, 11, 11)
+                .addComponent(entrada1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(entrada2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout LabelsLayout = new javax.swing.GroupLayout(Labels);
+        Labels.setLayout(LabelsLayout);
+        LabelsLayout.setHorizontalGroup(
+            LabelsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(LabelsLayout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addGroup(LabelsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(nomN2)
+                    .addComponent(nomN1))
+                .addGap(18, 18, 18)
+                .addComponent(Decimal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        LabelsLayout.setVerticalGroup(
+            LabelsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(LabelsLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(nomN1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(nomN2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(LabelsLayout.createSequentialGroup()
+                .addComponent(Decimal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(Labels1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Decimal1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(Labels, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel3))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(32, 32, 32)
+                                .addComponent(Base, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(31, 31, 31)
+                                .addComponent(Operaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)))))
+                .addContainerGap(36, Short.MAX_VALUE))
+        );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(83, Short.MAX_VALUE)
+                .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Hexadecimal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Octal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(Decimal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(Binarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(Labels, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(12, 12, 12)
-                .addComponent(Operaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                    .addComponent(Base, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Labels, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Operaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(17, 17, 17)
+                .addComponent(jLabel3)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(4, 4, 4)
+                        .addComponent(Decimal1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(Labels1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void sumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sumaActionPerformed
-
-        if (decimal.isSelected() == true) {
-            int num1 = Integer.parseInt(numero1.getText());
-            int num2 = Integer.parseInt(numero2.getText());
+        String tbase;
+        tbase = Base.getSelectedItem().toString();
+        if (tbase == "Decimal") {
+            int num1 = Integer.parseInt(entrada1.getText());
+            int num2 = Integer.parseInt(entrada2.getText());
             int br3;
             br3 = (num1 + num2);
+            String d1;
+            String d2;
+            String d3;
             String bi1;
             String bi2;
             String bi3;
@@ -378,136 +487,261 @@ public class ventana extends javax.swing.JFrame {
             String oc1;
             String oc2;
             String oc3;
-
+            // conversion
+            //Binario            
             bi1 = Integer.toBinaryString(num1);
             bi2 = Integer.toBinaryString(num2);
             bi3 = Integer.toBinaryString(br3);
+//Hexadeciaml
             hr1 = Integer.toHexString(num1);
             hr2 = Integer.toHexString(num2);
             hr3 = Integer.toHexString(br3);
+//octal
             oc1 = Integer.toOctalString(num1);
             oc2 = Integer.toOctalString(num2);
             oc3 = Integer.toOctalString(br3);
+            //deciaml
+            d1 = Integer.toString(num1);
+            d2 = Integer.toString(num2);
+//Salida            
 
-            resultado.setText(String.valueOf(br3));
+//decimal
+            de1.setText(String.valueOf(d1));
+            de2.setText(String.valueOf(d2));
+            rd.setText(String.valueOf(br3));
+            //Binario
             b1.setText(String.valueOf(bi1));
             b2.setText(String.valueOf(bi2));
             rb.setText(String.valueOf(bi3));
+            //Hexadecimal
             h1.setText(String.valueOf(hr1));
             h2.setText(String.valueOf(hr2));
             rh.setText(String.valueOf(hr3));
+            //octal
             o1.setText(String.valueOf(oc1));
             o2.setText(String.valueOf(oc2));
             ro.setText(String.valueOf(oc3));
 
         }
-        if (binario.isSelected() == true) {
-            //variables
-            int dnum1 = Integer.parseInt(b1.getText(), 2);
-            int dnum2 = Integer.parseInt(b2.getText(), 2);
-            String bi3;
-            int br3;
-            String hr1;
-            String hr2;
-            String hr3;
-            String oc1;
-            String oc2;
-            String oc3;
-            //conversion
-            br3 = (dnum1 + dnum2);
-            bi3 = Integer.toBinaryString(br3);
-            hr1 = Integer.toHexString(dnum1);
-            hr2 = Integer.toHexString(dnum2);
-            hr3 = Integer.toHexString(br3);
-            oc1 = Integer.toOctalString(dnum1);
-            oc2 = Integer.toOctalString(dnum2);
-            oc3 = Integer.toOctalString(br3);
-            //impresion
-            resultado.setText(String.valueOf(br3));
-            numero1.setText(String.valueOf(dnum1));
-            numero2.setText(String.valueOf(dnum2));
-            rb.setText(String.valueOf(bi3));
-            h1.setText(String.valueOf(hr1));
-            h2.setText(String.valueOf(hr2));
-            rh.setText(String.valueOf(hr3));
-            o1.setText(String.valueOf(oc1));
-            o2.setText(String.valueOf(oc2));
-            ro.setText(String.valueOf(oc3));
-        }
-        if (octal.isSelected() == true) {
+        if (tbase == "Binario") {
+            String e1 = (entrada1.getText());
+            String e2 = (entrada2.getText());
+            if (e1.matches("[0-1]*")) {
+                if (e2.matches("[0-1]*")) {
+                    int num1 = Integer.parseInt(entrada1.getText(), 2);
+                    int num2 = Integer.parseInt(entrada2.getText(), 2);
+                    int r3;
+                    r3 = (num1 + num2);
+                    String d1;
+                    String d2;
+                    String d3;
 
-            int dnum1 = Integer.parseInt(o1.getText(), 8);
-            int dnum2 = Integer.parseInt(o2.getText(), 8);
-            String bi3;
-            int br3;
-            String bi1;
-            String bi2;
-            String hr1;
-            String hr2;
-            String hr3;
-            String oc3;
-            //conversion
-            br3 = (dnum1 + dnum2);
-            bi1 = Integer.toBinaryString(dnum1);
-            bi2 = Integer.toBinaryString(dnum2);
-            bi3 = Integer.toBinaryString(br3);
-            hr1 = Integer.toHexString(dnum1);
-            hr2 = Integer.toHexString(dnum2);
-            hr3 = Integer.toHexString(br3);
-            oc3 = Integer.toOctalString(br3);
-            //impresion
-            resultado.setText(String.valueOf(br3));
-            numero1.setText(String.valueOf(dnum1));
-            numero2.setText(String.valueOf(dnum2));
-            rb.setText(String.valueOf(bi3));
-            h1.setText(String.valueOf(hr1));
-            h2.setText(String.valueOf(hr2));
-            rh.setText(String.valueOf(hr3));
-            b1.setText(String.valueOf(bi1));
-            b2.setText(String.valueOf(bi2));
-            ro.setText(String.valueOf(oc3));
+                    String bi1;
+                    String bi2;
+                    String bi3;
+
+                    String hr1;
+                    String hr2;
+                    String hr3;
+
+                    String oc1;
+                    String oc2;
+                    String oc3;
+                    // conversion
+                    //Binario            
+                    bi1 = Integer.toBinaryString(num1);
+                    bi2 = Integer.toBinaryString(num2);
+                    bi3 = Integer.toBinaryString(r3);
+//Hexadeciaml
+                    hr1 = Integer.toHexString(num1);
+                    hr2 = Integer.toHexString(num2);
+                    hr3 = Integer.toHexString(r3);
+//octal
+                    oc1 = Integer.toOctalString(num1);
+                    oc2 = Integer.toOctalString(num2);
+                    oc3 = Integer.toOctalString(r3);
+                    //decimal
+                    d1 = Integer.toString(num1);
+                    d2 = Integer.toString(num2);
+                    d3 = Integer.toString(r3);
+//Salida            
+
+//decimal
+                    de1.setText(String.valueOf(d1));
+                    de2.setText(String.valueOf(d2));
+                    rd.setText(String.valueOf(d3));
+                    //Binario
+                    b1.setText(String.valueOf(bi1));
+                    b2.setText(String.valueOf(bi2));
+                    rb.setText(String.valueOf(bi3));
+                    //Hexadecimal
+                    h1.setText(String.valueOf(hr1));
+                    h2.setText(String.valueOf(hr2));
+                    rh.setText(String.valueOf(hr3));
+                    //octal
+                    o1.setText(String.valueOf(oc1));
+                    o2.setText(String.valueOf(oc2));
+                    ro.setText(String.valueOf(oc3));
+
+                } else {
+                    JOptionPane.showMessageDialog(null, "Numero No Permitidos", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Numero No Permitidos", "Error", JOptionPane.ERROR_MESSAGE);
+            }
         }
 
-        if (hexa.isSelected() == true) {
-            int dnum1 = Integer.parseInt(h1.getText(), 16);
-            int dnum2 = Integer.parseInt(h2.getText(), 16);
-            String bi3;
-            int br3;
-            String bi1;
-            String bi2;
-            String oc1;
-            String oc2;
-            String hr3;
-            String oc3;
-            //conversion
-            br3 = (dnum1 + dnum2);
-            bi1 = Integer.toBinaryString(dnum1);
-            bi2 = Integer.toBinaryString(dnum2);
-            bi3 = Integer.toBinaryString(br3);
-            oc1 = Integer.toOctalString(dnum1);
-            oc2 = Integer.toOctalString(dnum2);
-            hr3 = Integer.toHexString(br3);
-            oc3 = Integer.toOctalString(br3);
-            //impresion
-            resultado.setText(String.valueOf(br3));
-            numero1.setText(String.valueOf(dnum1));
-            numero2.setText(String.valueOf(dnum2));
-            rb.setText(String.valueOf(bi3));
-            o1.setText(String.valueOf(oc1));
-            o2.setText(String.valueOf(oc2));
-            rh.setText(String.valueOf(hr3));
-            b1.setText(String.valueOf(bi1));
-            b2.setText(String.valueOf(bi2));
-            ro.setText(String.valueOf(oc3));
+        if (tbase == "Hexadecimal") {
+            String e1 = (entrada1.getText());
+            String e2 = (entrada2.getText());
+            if (e1.matches("[0-9A-Fa-f]*")) {
+                if (e2.matches("[0-9A-Fa-f]*")) {
+                    int num1 = Integer.parseInt(entrada1.getText(), 16);
+                    int num2 = Integer.parseInt(entrada2.getText(), 16);
+                    int r3;
+                    r3 = (num1 + num2);
+                    String d1;
+                    String d2;
+                    String d3;
+
+                    String bi1;
+                    String bi2;
+                    String bi3;
+
+                    String hr1;
+                    String hr2;
+                    String hr3;
+
+                    String oc1;
+                    String oc2;
+                    String oc3;
+                    // conversion
+                    //Binario            
+                    bi1 = Integer.toBinaryString(num1);
+                    bi2 = Integer.toBinaryString(num2);
+                    bi3 = Integer.toBinaryString(r3);
+//Hexadeciaml
+                    hr1 = Integer.toHexString(num1);
+                    hr2 = Integer.toHexString(num2);
+                    hr3 = Integer.toHexString(r3);
+//octal
+                    oc1 = Integer.toOctalString(num1);
+                    oc2 = Integer.toOctalString(num2);
+                    oc3 = Integer.toOctalString(r3);
+                    //decimal
+                    d1 = Integer.toString(num1);
+                    d2 = Integer.toString(num2);
+                    d3 = Integer.toString(r3);
+//Salida            
+
+//decimal
+                    de1.setText(String.valueOf(d1));
+                    de2.setText(String.valueOf(d2));
+                    rd.setText(String.valueOf(d3));
+                    //Binario
+                    b1.setText(String.valueOf(bi1));
+                    b2.setText(String.valueOf(bi2));
+                    rb.setText(String.valueOf(bi3));
+                    //Hexadecimal
+                    h1.setText(String.valueOf(hr1));
+                    h2.setText(String.valueOf(hr2));
+                    rh.setText(String.valueOf(hr3));
+                    //octal
+                    o1.setText(String.valueOf(oc1));
+                    o2.setText(String.valueOf(oc2));
+                    ro.setText(String.valueOf(oc3));
+
+                } else {
+                    JOptionPane.showMessageDialog(null, "Numero No Permitidos", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Numero No Permitidos", "Error", JOptionPane.ERROR_MESSAGE);
+            }
         }
+
+        if (tbase == "Octal") {
+            String e1 = (entrada1.getText());
+            String e2 = (entrada2.getText());
+            if (e1.matches("[0-7]*")) {
+                if (e2.matches("[0-7]*")) {
+                    int num1 = Integer.parseInt(entrada1.getText(), 8);
+                    int num2 = Integer.parseInt(entrada2.getText(), 8);
+                    int r3;
+                    r3 = (num1 + num2);
+                    String d1;
+                    String d2;
+                    String d3;
+
+                    String bi1;
+                    String bi2;
+                    String bi3;
+
+                    String hr1;
+                    String hr2;
+                    String hr3;
+
+                    String oc1;
+                    String oc2;
+                    String oc3;
+                    // conversion
+                    //Binario            
+                    bi1 = Integer.toBinaryString(num1);
+                    bi2 = Integer.toBinaryString(num2);
+                    bi3 = Integer.toBinaryString(r3);
+//Hexadeciaml
+                    hr1 = Integer.toHexString(num1);
+                    hr2 = Integer.toHexString(num2);
+                    hr3 = Integer.toHexString(r3);
+//octal
+                    oc1 = Integer.toOctalString(num1);
+                    oc2 = Integer.toOctalString(num2);
+                    oc3 = Integer.toOctalString(r3);
+                    //decimal
+                    d1 = Integer.toString(num1);
+                    d2 = Integer.toString(num2);
+                    d3 = Integer.toString(r3);
+//Salida            
+
+//decimal
+                    de1.setText(String.valueOf(d1));
+                    de2.setText(String.valueOf(d2));
+                    rd.setText(String.valueOf(d3));
+                    //Binario
+                    b1.setText(String.valueOf(bi1));
+                    b2.setText(String.valueOf(bi2));
+                    rb.setText(String.valueOf(bi3));
+                    //Hexadecimal
+                    h1.setText(String.valueOf(hr1));
+                    h2.setText(String.valueOf(hr2));
+                    rh.setText(String.valueOf(hr3));
+                    //octal
+                    o1.setText(String.valueOf(oc1));
+                    o2.setText(String.valueOf(oc2));
+                    ro.setText(String.valueOf(oc3));
+
+                } else {
+                    JOptionPane.showMessageDialog(null, "Numero No Permitidos", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Numero No Permitidos", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+
+
     }//GEN-LAST:event_sumaActionPerformed
 
+
     private void divisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divisionActionPerformed
-        if (decimal.isSelected() == true) {
-            int num1 = Integer.parseInt(numero1.getText());
-            int num2 = Integer.parseInt(numero2.getText());
+        String tbase;
+        tbase = Base.getSelectedItem().toString();
+        if (tbase == "Decimal") {
+            int num1 = Integer.parseInt(entrada1.getText());
+            int num2 = Integer.parseInt(entrada2.getText());
             int br3;
             br3 = (num1 / num2);
+            String d1;
+            String d2;
+            String d3;
             String bi1;
             String bi2;
             String bi3;
@@ -517,136 +751,260 @@ public class ventana extends javax.swing.JFrame {
             String oc1;
             String oc2;
             String oc3;
-
+            // conversion
+            //Binario            
             bi1 = Integer.toBinaryString(num1);
             bi2 = Integer.toBinaryString(num2);
             bi3 = Integer.toBinaryString(br3);
+//Hexadeciaml
             hr1 = Integer.toHexString(num1);
             hr2 = Integer.toHexString(num2);
             hr3 = Integer.toHexString(br3);
+//octal
             oc1 = Integer.toOctalString(num1);
             oc2 = Integer.toOctalString(num2);
             oc3 = Integer.toOctalString(br3);
+            //deciaml
+            d1 = Integer.toString(num1);
+            d2 = Integer.toString(num2);
+//Salida            
 
-            resultado.setText(String.valueOf(br3));
+//decimal
+            de1.setText(String.valueOf(d1));
+            de2.setText(String.valueOf(d2));
+            rd.setText(String.valueOf(br3));
+            //Binario
             b1.setText(String.valueOf(bi1));
             b2.setText(String.valueOf(bi2));
             rb.setText(String.valueOf(bi3));
+            //Hexadecimal
             h1.setText(String.valueOf(hr1));
             h2.setText(String.valueOf(hr2));
             rh.setText(String.valueOf(hr3));
+            //octal
             o1.setText(String.valueOf(oc1));
             o2.setText(String.valueOf(oc2));
             ro.setText(String.valueOf(oc3));
 
         }
-        if (binario.isSelected() == true) {
-            //variables
-            int dnum1 = Integer.parseInt(b1.getText(), 2);
-            int dnum2 = Integer.parseInt(b2.getText(), 2);
-            String bi3;
-            int br3;
-            String hr1;
-            String hr2;
-            String hr3;
-            String oc1;
-            String oc2;
-            String oc3;
-            //conversion
-            br3 = (dnum1 / dnum2);
-            bi3 = Integer.toBinaryString(br3);
-            hr1 = Integer.toHexString(dnum1);
-            hr2 = Integer.toHexString(dnum2);
-            hr3 = Integer.toHexString(br3);
-            oc1 = Integer.toOctalString(dnum1);
-            oc2 = Integer.toOctalString(dnum2);
-            oc3 = Integer.toOctalString(br3);
-            //impresion
-            resultado.setText(String.valueOf(br3));
-            numero1.setText(String.valueOf(dnum1));
-            numero2.setText(String.valueOf(dnum2));
-            rb.setText(String.valueOf(bi3));
-            h1.setText(String.valueOf(hr1));
-            h2.setText(String.valueOf(hr2));
-            rh.setText(String.valueOf(hr3));
-            o1.setText(String.valueOf(oc1));
-            o2.setText(String.valueOf(oc2));
-            ro.setText(String.valueOf(oc3));
-        }
-        if (octal.isSelected() == true) {
+        if (tbase == "Binario") {
+            String e1 = (entrada1.getText());
+            String e2 = (entrada2.getText());
+            if (e1.matches("[0-1]*")) {
+                if (e2.matches("[0-1]*")) {
+                    int num1 = Integer.parseInt(entrada1.getText(), 2);
+                    int num2 = Integer.parseInt(entrada2.getText(), 2);
+                    int r3;
+                    r3 = (num1 / num2);
+                    String d1;
+                    String d2;
+                    String d3;
 
-            int dnum1 = Integer.parseInt(o1.getText(), 8);
-            int dnum2 = Integer.parseInt(o2.getText(), 8);
-            String bi3;
-            int br3;
-            String bi1;
-            String bi2;
-            String hr1;
-            String hr2;
-            String hr3;
-            String oc3;
-            //conversion
-            br3 = (dnum1 / dnum2);
-            bi1 = Integer.toBinaryString(dnum1);
-            bi2 = Integer.toBinaryString(dnum2);
-            bi3 = Integer.toBinaryString(br3);
-            hr1 = Integer.toHexString(dnum1);
-            hr2 = Integer.toHexString(dnum2);
-            hr3 = Integer.toHexString(br3);
-            oc3 = Integer.toOctalString(br3);
-            //impresion
-            resultado.setText(String.valueOf(br3));
-            numero1.setText(String.valueOf(dnum1));
-            numero2.setText(String.valueOf(dnum2));
-            rb.setText(String.valueOf(bi3));
-            h1.setText(String.valueOf(hr1));
-            h2.setText(String.valueOf(hr2));
-            rh.setText(String.valueOf(hr3));
-            b1.setText(String.valueOf(bi1));
-            b2.setText(String.valueOf(bi2));
-            ro.setText(String.valueOf(oc3));
+                    String bi1;
+                    String bi2;
+                    String bi3;
+
+                    String hr1;
+                    String hr2;
+                    String hr3;
+
+                    String oc1;
+                    String oc2;
+                    String oc3;
+                    // conversion
+                    //Binario            
+                    bi1 = Integer.toBinaryString(num1);
+                    bi2 = Integer.toBinaryString(num2);
+                    bi3 = Integer.toBinaryString(r3);
+//Hexadeciaml
+                    hr1 = Integer.toHexString(num1);
+                    hr2 = Integer.toHexString(num2);
+                    hr3 = Integer.toHexString(r3);
+//octal
+                    oc1 = Integer.toOctalString(num1);
+                    oc2 = Integer.toOctalString(num2);
+                    oc3 = Integer.toOctalString(r3);
+                    //decimal
+                    d1 = Integer.toString(num1);
+                    d2 = Integer.toString(num2);
+                    d3 = Integer.toString(r3);
+//Salida            
+
+//decimal
+                    de1.setText(String.valueOf(d1));
+                    de2.setText(String.valueOf(d2));
+                    rd.setText(String.valueOf(d3));
+                    //Binario
+                    b1.setText(String.valueOf(bi1));
+                    b2.setText(String.valueOf(bi2));
+                    rb.setText(String.valueOf(bi3));
+                    //Hexadecimal
+                    h1.setText(String.valueOf(hr1));
+                    h2.setText(String.valueOf(hr2));
+                    rh.setText(String.valueOf(hr3));
+                    //octal
+                    o1.setText(String.valueOf(oc1));
+                    o2.setText(String.valueOf(oc2));
+                    ro.setText(String.valueOf(oc3));
+
+                } else {
+                    JOptionPane.showMessageDialog(null, "Numero No Permitidos", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Numero No Permitidos", "Error", JOptionPane.ERROR_MESSAGE);
+            }
         }
 
-        if (hexa.isSelected() == true) {
-            int dnum1 = Integer.parseInt(h1.getText(), 16);
-            int dnum2 = Integer.parseInt(h2.getText(), 16);
-            String bi3;
-            int br3;
-            String bi1;
-            String bi2;
-            String oc1;
-            String oc2;
-            String hr3;
-            String oc3;
-            //conversion
-            br3 = (dnum1 / dnum2);
-            bi1 = Integer.toBinaryString(dnum1);
-            bi2 = Integer.toBinaryString(dnum2);
-            bi3 = Integer.toBinaryString(br3);
-            oc1 = Integer.toOctalString(dnum1);
-            oc2 = Integer.toOctalString(dnum2);
-            hr3 = Integer.toHexString(br3);
-            oc3 = Integer.toOctalString(br3);
-            //impresion
-            resultado.setText(String.valueOf(br3));
-            numero1.setText(String.valueOf(dnum1));
-            numero2.setText(String.valueOf(dnum2));
-            rb.setText(String.valueOf(bi3));
-            o1.setText(String.valueOf(oc1));
-            o2.setText(String.valueOf(oc2));
-            rh.setText(String.valueOf(hr3));
-            b1.setText(String.valueOf(bi1));
-            b2.setText(String.valueOf(bi2));
-            ro.setText(String.valueOf(oc3));
+        if (tbase == "Hexadecimal") {
+            String e1 = (entrada1.getText());
+            String e2 = (entrada2.getText());
+            if (e1.matches("[0-9A-Fa-f]*")) {
+                if (e2.matches("[0-9A-Fa-f]*")) {
+                    int num1 = Integer.parseInt(entrada1.getText(), 16);
+                    int num2 = Integer.parseInt(entrada2.getText(), 16);
+                    int r3;
+                    r3 = (num1 / num2);
+                    String d1;
+                    String d2;
+                    String d3;
+
+                    String bi1;
+                    String bi2;
+                    String bi3;
+
+                    String hr1;
+                    String hr2;
+                    String hr3;
+
+                    String oc1;
+                    String oc2;
+                    String oc3;
+                    // conversion
+                    //Binario            
+                    bi1 = Integer.toBinaryString(num1);
+                    bi2 = Integer.toBinaryString(num2);
+                    bi3 = Integer.toBinaryString(r3);
+//Hexadeciaml
+                    hr1 = Integer.toHexString(num1);
+                    hr2 = Integer.toHexString(num2);
+                    hr3 = Integer.toHexString(r3);
+//octal
+                    oc1 = Integer.toOctalString(num1);
+                    oc2 = Integer.toOctalString(num2);
+                    oc3 = Integer.toOctalString(r3);
+                    //decimal
+                    d1 = Integer.toString(num1);
+                    d2 = Integer.toString(num2);
+                    d3 = Integer.toString(r3);
+//Salida            
+
+//decimal
+                    de1.setText(String.valueOf(d1));
+                    de2.setText(String.valueOf(d2));
+                    rd.setText(String.valueOf(d3));
+                    //Binario
+                    b1.setText(String.valueOf(bi1));
+                    b2.setText(String.valueOf(bi2));
+                    rb.setText(String.valueOf(bi3));
+                    //Hexadecimal
+                    h1.setText(String.valueOf(hr1));
+                    h2.setText(String.valueOf(hr2));
+                    rh.setText(String.valueOf(hr3));
+                    //octal
+                    o1.setText(String.valueOf(oc1));
+                    o2.setText(String.valueOf(oc2));
+                    ro.setText(String.valueOf(oc3));
+
+                } else {
+                    JOptionPane.showMessageDialog(null, "Numero No Permitidos", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Numero No Permitidos", "Error", JOptionPane.ERROR_MESSAGE);
+            }
         }
+
+        if (tbase == "Octal") {
+            String e1 = (entrada1.getText());
+            String e2 = (entrada2.getText());
+            if (e1.matches("[0-7]*")) {
+                if (e2.matches("[0-7]*")) {
+                    int num1 = Integer.parseInt(entrada1.getText(), 8);
+                    int num2 = Integer.parseInt(entrada2.getText(), 8);
+                    int r3;
+                    r3 = (num1 / num2);
+                    String d1;
+                    String d2;
+                    String d3;
+
+                    String bi1;
+                    String bi2;
+                    String bi3;
+
+                    String hr1;
+                    String hr2;
+                    String hr3;
+
+                    String oc1;
+                    String oc2;
+                    String oc3;
+                    // conversion
+                    //Binario            
+                    bi1 = Integer.toBinaryString(num1);
+                    bi2 = Integer.toBinaryString(num2);
+                    bi3 = Integer.toBinaryString(r3);
+//Hexadeciaml
+                    hr1 = Integer.toHexString(num1);
+                    hr2 = Integer.toHexString(num2);
+                    hr3 = Integer.toHexString(r3);
+//octal
+                    oc1 = Integer.toOctalString(num1);
+                    oc2 = Integer.toOctalString(num2);
+                    oc3 = Integer.toOctalString(r3);
+                    //decimal
+                    d1 = Integer.toString(num1);
+                    d2 = Integer.toString(num2);
+                    d3 = Integer.toString(r3);
+//Salida            
+
+//decimal
+                    de1.setText(String.valueOf(d1));
+                    de2.setText(String.valueOf(d2));
+                    rd.setText(String.valueOf(d3));
+                    //Binario
+                    b1.setText(String.valueOf(bi1));
+                    b2.setText(String.valueOf(bi2));
+                    rb.setText(String.valueOf(bi3));
+                    //Hexadecimal
+                    h1.setText(String.valueOf(hr1));
+                    h2.setText(String.valueOf(hr2));
+                    rh.setText(String.valueOf(hr3));
+                    //octal
+                    o1.setText(String.valueOf(oc1));
+                    o2.setText(String.valueOf(oc2));
+                    ro.setText(String.valueOf(oc3));
+
+                } else {
+                    JOptionPane.showMessageDialog(null, "Numero No Permitidos", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Numero No Permitidos", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+
+
     }//GEN-LAST:event_divisionActionPerformed
 
     private void restaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_restaActionPerformed
- if (decimal.isSelected() == true) {
-            int num1 = Integer.parseInt(numero1.getText());
-            int num2 = Integer.parseInt(numero2.getText());
+        String tbase;
+        tbase = Base.getSelectedItem().toString();
+        if (tbase == "Decimal") {
+            int num1 = Integer.parseInt(entrada1.getText());
+            int num2 = Integer.parseInt(entrada2.getText());
             int br3;
             br3 = (num1 - num2);
+            String d1;
+            String d2;
+            String d3;
             String bi1;
             String bi2;
             String bi3;
@@ -656,136 +1014,260 @@ public class ventana extends javax.swing.JFrame {
             String oc1;
             String oc2;
             String oc3;
-
+            // conversion
+            //Binario            
             bi1 = Integer.toBinaryString(num1);
             bi2 = Integer.toBinaryString(num2);
             bi3 = Integer.toBinaryString(br3);
+//Hexadeciaml
             hr1 = Integer.toHexString(num1);
             hr2 = Integer.toHexString(num2);
             hr3 = Integer.toHexString(br3);
+//octal
             oc1 = Integer.toOctalString(num1);
             oc2 = Integer.toOctalString(num2);
             oc3 = Integer.toOctalString(br3);
+            //deciaml
+            d1 = Integer.toString(num1);
+            d2 = Integer.toString(num2);
+//Salida            
 
-            resultado.setText(String.valueOf(br3));
+//decimal
+            de1.setText(String.valueOf(d1));
+            de2.setText(String.valueOf(d2));
+            rd.setText(String.valueOf(br3));
+            //Binario
             b1.setText(String.valueOf(bi1));
             b2.setText(String.valueOf(bi2));
             rb.setText(String.valueOf(bi3));
+            //Hexadecimal
             h1.setText(String.valueOf(hr1));
             h2.setText(String.valueOf(hr2));
             rh.setText(String.valueOf(hr3));
+            //octal
             o1.setText(String.valueOf(oc1));
             o2.setText(String.valueOf(oc2));
             ro.setText(String.valueOf(oc3));
 
         }
-        if (binario.isSelected() == true) {
-            //variables
-            int dnum1 = Integer.parseInt(b1.getText(), 2);
-            int dnum2 = Integer.parseInt(b2.getText(), 2);
-            String bi3;
-            int br3;
-            String hr1;
-            String hr2;
-            String hr3;
-            String oc1;
-            String oc2;
-            String oc3;
-            //conversion
-            br3 = (dnum1 - dnum2);
-            bi3 = Integer.toBinaryString(br3);
-            hr1 = Integer.toHexString(dnum1);
-            hr2 = Integer.toHexString(dnum2);
-            hr3 = Integer.toHexString(br3);
-            oc1 = Integer.toOctalString(dnum1);
-            oc2 = Integer.toOctalString(dnum2);
-            oc3 = Integer.toOctalString(br3);
-            //impresion
-            resultado.setText(String.valueOf(br3));
-            numero1.setText(String.valueOf(dnum1));
-            numero2.setText(String.valueOf(dnum2));
-            rb.setText(String.valueOf(bi3));
-            h1.setText(String.valueOf(hr1));
-            h2.setText(String.valueOf(hr2));
-            rh.setText(String.valueOf(hr3));
-            o1.setText(String.valueOf(oc1));
-            o2.setText(String.valueOf(oc2));
-            ro.setText(String.valueOf(oc3));
-        }
-        if (octal.isSelected() == true) {
+        if (tbase == "Binario") {
+            String e1 = (entrada1.getText());
+            String e2 = (entrada2.getText());
+            if (e1.matches("[0-1]*")) {
+                if (e2.matches("[0-1]*")) {
+                    int num1 = Integer.parseInt(entrada1.getText(), 2);
+                    int num2 = Integer.parseInt(entrada2.getText(), 2);
+                    int r3;
+                    r3 = (num1 - num2);
+                    String d1;
+                    String d2;
+                    String d3;
 
-            int dnum1 = Integer.parseInt(o1.getText(), 8);
-            int dnum2 = Integer.parseInt(o2.getText(), 8);
-            String bi3;
-            int br3;
-            String bi1;
-            String bi2;
-            String hr1;
-            String hr2;
-            String hr3;
-            String oc3;
-            //conversion
-            br3 = (dnum1 - dnum2);
-            bi1 = Integer.toBinaryString(dnum1);
-            bi2 = Integer.toBinaryString(dnum2);
-            bi3 = Integer.toBinaryString(br3);
-            hr1 = Integer.toHexString(dnum1);
-            hr2 = Integer.toHexString(dnum2);
-            hr3 = Integer.toHexString(br3);
-            oc3 = Integer.toOctalString(br3);
-            //impresion
-            resultado.setText(String.valueOf(br3));
-            numero1.setText(String.valueOf(dnum1));
-            numero2.setText(String.valueOf(dnum2));
-            rb.setText(String.valueOf(bi3));
-            h1.setText(String.valueOf(hr1));
-            h2.setText(String.valueOf(hr2));
-            rh.setText(String.valueOf(hr3));
-            b1.setText(String.valueOf(bi1));
-            b2.setText(String.valueOf(bi2));
-            ro.setText(String.valueOf(oc3));
+                    String bi1;
+                    String bi2;
+                    String bi3;
+
+                    String hr1;
+                    String hr2;
+                    String hr3;
+
+                    String oc1;
+                    String oc2;
+                    String oc3;
+                    // conversion
+                    //Binario            
+                    bi1 = Integer.toBinaryString(num1);
+                    bi2 = Integer.toBinaryString(num2);
+                    bi3 = Integer.toBinaryString(r3);
+//Hexadeciaml
+                    hr1 = Integer.toHexString(num1);
+                    hr2 = Integer.toHexString(num2);
+                    hr3 = Integer.toHexString(r3);
+//octal
+                    oc1 = Integer.toOctalString(num1);
+                    oc2 = Integer.toOctalString(num2);
+                    oc3 = Integer.toOctalString(r3);
+                    //decimal
+                    d1 = Integer.toString(num1);
+                    d2 = Integer.toString(num2);
+                    d3 = Integer.toString(r3);
+//Salida            
+
+//decimal
+                    de1.setText(String.valueOf(d1));
+                    de2.setText(String.valueOf(d2));
+                    rd.setText(String.valueOf(d3));
+                    //Binario
+                    b1.setText(String.valueOf(bi1));
+                    b2.setText(String.valueOf(bi2));
+                    rb.setText(String.valueOf(bi3));
+                    //Hexadecimal
+                    h1.setText(String.valueOf(hr1));
+                    h2.setText(String.valueOf(hr2));
+                    rh.setText(String.valueOf(hr3));
+                    //octal
+                    o1.setText(String.valueOf(oc1));
+                    o2.setText(String.valueOf(oc2));
+                    ro.setText(String.valueOf(oc3));
+
+                } else {
+                    JOptionPane.showMessageDialog(null, "Numero No Permitidos", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Numero No Permitidos", "Error", JOptionPane.ERROR_MESSAGE);
+            }
         }
 
-        if (hexa.isSelected() == true) {
-            int dnum1 = Integer.parseInt(h1.getText(), 16);
-            int dnum2 = Integer.parseInt(h2.getText(), 16);
-            String bi3;
-            int br3;
-            String bi1;
-            String bi2;
-            String oc1;
-            String oc2;
-            String hr3;
-            String oc3;
-            //conversion
-            br3 = (dnum1 - dnum2);
-            bi1 = Integer.toBinaryString(dnum1);
-            bi2 = Integer.toBinaryString(dnum2);
-            bi3 = Integer.toBinaryString(br3);
-            oc1 = Integer.toOctalString(dnum1);
-            oc2 = Integer.toOctalString(dnum2);
-            hr3 = Integer.toHexString(br3);
-            oc3 = Integer.toOctalString(br3);
-            //impresion
-            resultado.setText(String.valueOf(br3));
-            numero1.setText(String.valueOf(dnum1));
-            numero2.setText(String.valueOf(dnum2));
-            rb.setText(String.valueOf(bi3));
-            o1.setText(String.valueOf(oc1));
-            o2.setText(String.valueOf(oc2));
-            rh.setText(String.valueOf(hr3));
-            b1.setText(String.valueOf(bi1));
-            b2.setText(String.valueOf(bi2));
-            ro.setText(String.valueOf(oc3));
+        if (tbase == "Hexadecimal") {
+            String e1 = (entrada1.getText());
+            String e2 = (entrada2.getText());
+            if (e1.matches("[0-9A-Fa-f]*")) {
+                if (e2.matches("[0-9A-Fa-f]*")) {
+                    int num1 = Integer.parseInt(entrada1.getText(), 16);
+                    int num2 = Integer.parseInt(entrada2.getText(), 16);
+                    int r3;
+                    r3 = (num1 - num2);
+                    String d1;
+                    String d2;
+                    String d3;
+
+                    String bi1;
+                    String bi2;
+                    String bi3;
+
+                    String hr1;
+                    String hr2;
+                    String hr3;
+
+                    String oc1;
+                    String oc2;
+                    String oc3;
+                    // conversion
+                    //Binario            
+                    bi1 = Integer.toBinaryString(num1);
+                    bi2 = Integer.toBinaryString(num2);
+                    bi3 = Integer.toBinaryString(r3);
+//Hexadeciaml
+                    hr1 = Integer.toHexString(num1);
+                    hr2 = Integer.toHexString(num2);
+                    hr3 = Integer.toHexString(r3);
+//octal
+                    oc1 = Integer.toOctalString(num1);
+                    oc2 = Integer.toOctalString(num2);
+                    oc3 = Integer.toOctalString(r3);
+                    //decimal
+                    d1 = Integer.toString(num1);
+                    d2 = Integer.toString(num2);
+                    d3 = Integer.toString(r3);
+//Salida            
+
+//decimal
+                    de1.setText(String.valueOf(d1));
+                    de2.setText(String.valueOf(d2));
+                    rd.setText(String.valueOf(d3));
+                    //Binario
+                    b1.setText(String.valueOf(bi1));
+                    b2.setText(String.valueOf(bi2));
+                    rb.setText(String.valueOf(bi3));
+                    //Hexadecimal
+                    h1.setText(String.valueOf(hr1));
+                    h2.setText(String.valueOf(hr2));
+                    rh.setText(String.valueOf(hr3));
+                    //octal
+                    o1.setText(String.valueOf(oc1));
+                    o2.setText(String.valueOf(oc2));
+                    ro.setText(String.valueOf(oc3));
+
+                } else {
+                    JOptionPane.showMessageDialog(null, "Numero No Permitidos", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Numero No Permitidos", "Error", JOptionPane.ERROR_MESSAGE);
+            }
         }
+
+        if (tbase == "Octal") {
+            String e1 = (entrada1.getText());
+            String e2 = (entrada2.getText());
+            if (e1.matches("[0-7]*")) {
+                if (e2.matches("[0-7]*")) {
+                    int num1 = Integer.parseInt(entrada1.getText(), 8);
+                    int num2 = Integer.parseInt(entrada2.getText(), 8);
+                    int r3;
+                    r3 = (num1 - num2);
+                    String d1;
+                    String d2;
+                    String d3;
+
+                    String bi1;
+                    String bi2;
+                    String bi3;
+
+                    String hr1;
+                    String hr2;
+                    String hr3;
+
+                    String oc1;
+                    String oc2;
+                    String oc3;
+                    // conversion
+                    //Binario            
+                    bi1 = Integer.toBinaryString(num1);
+                    bi2 = Integer.toBinaryString(num2);
+                    bi3 = Integer.toBinaryString(r3);
+//Hexadeciaml
+                    hr1 = Integer.toHexString(num1);
+                    hr2 = Integer.toHexString(num2);
+                    hr3 = Integer.toHexString(r3);
+//octal
+                    oc1 = Integer.toOctalString(num1);
+                    oc2 = Integer.toOctalString(num2);
+                    oc3 = Integer.toOctalString(r3);
+                    //decimal
+                    d1 = Integer.toString(num1);
+                    d2 = Integer.toString(num2);
+                    d3 = Integer.toString(r3);
+//Salida            
+
+//decimal
+                    de1.setText(String.valueOf(d1));
+                    de2.setText(String.valueOf(d2));
+                    rd.setText(String.valueOf(d3));
+                    //Binario
+                    b1.setText(String.valueOf(bi1));
+                    b2.setText(String.valueOf(bi2));
+                    rb.setText(String.valueOf(bi3));
+                    //Hexadecimal
+                    h1.setText(String.valueOf(hr1));
+                    h2.setText(String.valueOf(hr2));
+                    rh.setText(String.valueOf(hr3));
+                    //octal
+                    o1.setText(String.valueOf(oc1));
+                    o2.setText(String.valueOf(oc2));
+                    ro.setText(String.valueOf(oc3));
+
+                } else {
+                    JOptionPane.showMessageDialog(null, "Numero No Permitidos", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Numero No Permitidos", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+
+
     }//GEN-LAST:event_restaActionPerformed
 
     private void multiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplicacionActionPerformed
-      if (decimal.isSelected() == true) {
-            int num1 = Integer.parseInt(numero1.getText());
-            int num2 = Integer.parseInt(numero2.getText());
+        String tbase;
+        tbase = Base.getSelectedItem().toString();
+        if (tbase == "Decimal") {
+            int num1 = Integer.parseInt(entrada1.getText());
+            int num2 = Integer.parseInt(entrada2.getText());
             int br3;
             br3 = (num1 * num2);
+            String d1;
+            String d2;
+            String d3;
             String bi1;
             String bi2;
             String bi3;
@@ -795,135 +1277,254 @@ public class ventana extends javax.swing.JFrame {
             String oc1;
             String oc2;
             String oc3;
-
+            // conversion
+            //Binario            
             bi1 = Integer.toBinaryString(num1);
             bi2 = Integer.toBinaryString(num2);
             bi3 = Integer.toBinaryString(br3);
+//Hexadeciaml
             hr1 = Integer.toHexString(num1);
             hr2 = Integer.toHexString(num2);
             hr3 = Integer.toHexString(br3);
+//octal
             oc1 = Integer.toOctalString(num1);
             oc2 = Integer.toOctalString(num2);
             oc3 = Integer.toOctalString(br3);
+            //deciaml
+            d1 = Integer.toString(num1);
+            d2 = Integer.toString(num2);
+//Salida            
 
-            resultado.setText(String.valueOf(br3));
+//decimal
+            de1.setText(String.valueOf(d1));
+            de2.setText(String.valueOf(d2));
+            rd.setText(String.valueOf(br3));
+            //Binario
             b1.setText(String.valueOf(bi1));
             b2.setText(String.valueOf(bi2));
             rb.setText(String.valueOf(bi3));
+            //Hexadecimal
             h1.setText(String.valueOf(hr1));
             h2.setText(String.valueOf(hr2));
             rh.setText(String.valueOf(hr3));
+            //octal
             o1.setText(String.valueOf(oc1));
             o2.setText(String.valueOf(oc2));
             ro.setText(String.valueOf(oc3));
 
         }
-        if (binario.isSelected() == true) {
-            //variables
-            int dnum1 = Integer.parseInt(b1.getText(), 2);
-            int dnum2 = Integer.parseInt(b2.getText(), 2);
-            String bi3;
-            int br3;
-            String hr1;
-            String hr2;
-            String hr3;
-            String oc1;
-            String oc2;
-            String oc3;
-            //conversion
-            br3 = (dnum1 * dnum2);
-            bi3 = Integer.toBinaryString(br3);
-            hr1 = Integer.toHexString(dnum1);
-            hr2 = Integer.toHexString(dnum2);
-            hr3 = Integer.toHexString(br3);
-            oc1 = Integer.toOctalString(dnum1);
-            oc2 = Integer.toOctalString(dnum2);
-            oc3 = Integer.toOctalString(br3);
-            //impresion
-            resultado.setText(String.valueOf(br3));
-            numero1.setText(String.valueOf(dnum1));
-            numero2.setText(String.valueOf(dnum2));
-            rb.setText(String.valueOf(bi3));
-            h1.setText(String.valueOf(hr1));
-            h2.setText(String.valueOf(hr2));
-            rh.setText(String.valueOf(hr3));
-            o1.setText(String.valueOf(oc1));
-            o2.setText(String.valueOf(oc2));
-            ro.setText(String.valueOf(oc3));
-        }
-        if (octal.isSelected() == true) {
+        if (tbase == "Binario") {
+            String e1 = (entrada1.getText());
+            String e2 = (entrada2.getText());
+            if (e1.matches("[0-1]*")) {
+                if (e2.matches("[0-1]*")) {
+                    int num1 = Integer.parseInt(entrada1.getText(), 2);
+                    int num2 = Integer.parseInt(entrada2.getText(), 2);
+                    int r3;
+                    r3 = (num1 + num2);
+                    String d1;
+                    String d2;
+                    String d3;
 
-            int dnum1 = Integer.parseInt(o1.getText(), 8);
-            int dnum2 = Integer.parseInt(o2.getText(), 8);
-            String bi3;
-            int br3;
-            String bi1;
-            String bi2;
-            String hr1;
-            String hr2;
-            String hr3;
-            String oc3;
-            //conversion
-            br3 = (dnum1 * dnum2);
-            bi1 = Integer.toBinaryString(dnum1);
-            bi2 = Integer.toBinaryString(dnum2);
-            bi3 = Integer.toBinaryString(br3);
-            hr1 = Integer.toHexString(dnum1);
-            hr2 = Integer.toHexString(dnum2);
-            hr3 = Integer.toHexString(br3);
-            oc3 = Integer.toOctalString(br3);
-            //impresion
-            resultado.setText(String.valueOf(br3));
-            numero1.setText(String.valueOf(dnum1));
-            numero2.setText(String.valueOf(dnum2));
-            rb.setText(String.valueOf(bi3));
-            h1.setText(String.valueOf(hr1));
-            h2.setText(String.valueOf(hr2));
-            rh.setText(String.valueOf(hr3));
-            b1.setText(String.valueOf(bi1));
-            b2.setText(String.valueOf(bi2));
-            ro.setText(String.valueOf(oc3));
+                    String bi1;
+                    String bi2;
+                    String bi3;
+
+                    String hr1;
+                    String hr2;
+                    String hr3;
+
+                    String oc1;
+                    String oc2;
+                    String oc3;
+                    // conversion
+                    //Binario            
+                    bi1 = Integer.toBinaryString(num1);
+                    bi2 = Integer.toBinaryString(num2);
+                    bi3 = Integer.toBinaryString(r3);
+//Hexadeciaml
+                    hr1 = Integer.toHexString(num1);
+                    hr2 = Integer.toHexString(num2);
+                    hr3 = Integer.toHexString(r3);
+//octal
+                    oc1 = Integer.toOctalString(num1);
+                    oc2 = Integer.toOctalString(num2);
+                    oc3 = Integer.toOctalString(r3);
+                    //decimal
+                    d1 = Integer.toString(num1);
+                    d2 = Integer.toString(num2);
+                    d3 = Integer.toString(r3);
+//Salida            
+
+//decimal
+                    de1.setText(String.valueOf(d1));
+                    de2.setText(String.valueOf(d2));
+                    rd.setText(String.valueOf(d3));
+                    //Binario
+                    b1.setText(String.valueOf(bi1));
+                    b2.setText(String.valueOf(bi2));
+                    rb.setText(String.valueOf(bi3));
+                    //Hexadecimal
+                    h1.setText(String.valueOf(hr1));
+                    h2.setText(String.valueOf(hr2));
+                    rh.setText(String.valueOf(hr3));
+                    //octal
+                    o1.setText(String.valueOf(oc1));
+                    o2.setText(String.valueOf(oc2));
+                    ro.setText(String.valueOf(oc3));
+
+                } else {
+                    JOptionPane.showMessageDialog(null, "Numero No Permitidos", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Numero No Permitidos", "Error", JOptionPane.ERROR_MESSAGE);
+            }
         }
 
-        if (hexa.isSelected() == true) {
-            int dnum1 = Integer.parseInt(h1.getText(), 16);
-            int dnum2 = Integer.parseInt(h2.getText(), 16);
-            String bi3;
-            int br3;
-            String bi1;
-            String bi2;
-            String oc1;
-            String oc2;
-            String hr3;
-            String oc3;
-            //conversion
-            br3 = (dnum1 * dnum2);
-            bi1 = Integer.toBinaryString(dnum1);
-            bi2 = Integer.toBinaryString(dnum2);
-            bi3 = Integer.toBinaryString(br3);
-            oc1 = Integer.toOctalString(dnum1);
-            oc2 = Integer.toOctalString(dnum2);
-            hr3 = Integer.toHexString(br3);
-            oc3 = Integer.toOctalString(br3);
-            //impresion
-            resultado.setText(String.valueOf(br3));
-            numero1.setText(String.valueOf(dnum1));
-            numero2.setText(String.valueOf(dnum2));
-            rb.setText(String.valueOf(bi3));
-            o1.setText(String.valueOf(oc1));
-            o2.setText(String.valueOf(oc2));
-            rh.setText(String.valueOf(hr3));
-            b1.setText(String.valueOf(bi1));
-            b2.setText(String.valueOf(bi2));
-            ro.setText(String.valueOf(oc3));
+        if (tbase == "Hexadecimal") {
+            String e1 = (entrada1.getText());
+            String e2 = (entrada2.getText());
+            if (e1.matches("[0-9A-Fa-f]*")) {
+                if (e2.matches("[0-9A-Fa-f]*")) {
+                    int num1 = Integer.parseInt(entrada1.getText(), 16);
+                    int num2 = Integer.parseInt(entrada2.getText(), 16);
+                    int r3;
+                    r3 = (num1 * num2);
+                    String d1;
+                    String d2;
+                    String d3;
+
+                    String bi1;
+                    String bi2;
+                    String bi3;
+
+                    String hr1;
+                    String hr2;
+                    String hr3;
+
+                    String oc1;
+                    String oc2;
+                    String oc3;
+                    // conversion
+                    //Binario            
+                    bi1 = Integer.toBinaryString(num1);
+                    bi2 = Integer.toBinaryString(num2);
+                    bi3 = Integer.toBinaryString(r3);
+//Hexadeciaml
+                    hr1 = Integer.toHexString(num1);
+                    hr2 = Integer.toHexString(num2);
+                    hr3 = Integer.toHexString(r3);
+//octal
+                    oc1 = Integer.toOctalString(num1);
+                    oc2 = Integer.toOctalString(num2);
+                    oc3 = Integer.toOctalString(r3);
+                    //decimal
+                    d1 = Integer.toString(num1);
+                    d2 = Integer.toString(num2);
+                    d3 = Integer.toString(r3);
+//Salida            
+
+//decimal
+                    de1.setText(String.valueOf(d1));
+                    de2.setText(String.valueOf(d2));
+                    rd.setText(String.valueOf(d3));
+                    //Binario
+                    b1.setText(String.valueOf(bi1));
+                    b2.setText(String.valueOf(bi2));
+                    rb.setText(String.valueOf(bi3));
+                    //Hexadecimal
+                    h1.setText(String.valueOf(hr1));
+                    h2.setText(String.valueOf(hr2));
+                    rh.setText(String.valueOf(hr3));
+                    //octal
+                    o1.setText(String.valueOf(oc1));
+                    o2.setText(String.valueOf(oc2));
+                    ro.setText(String.valueOf(oc3));
+
+                } else {
+                    JOptionPane.showMessageDialog(null, "Numero No Permitidos", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Numero No Permitidos", "Error", JOptionPane.ERROR_MESSAGE);
+            }
         }
+
+        if (tbase == "Octal") {
+            String e1 = (entrada1.getText());
+            String e2 = (entrada2.getText());
+            if (e1.matches("[0-7]*")) {
+                if (e2.matches("[0-7]*")) {
+                    int num1 = Integer.parseInt(entrada1.getText(), 8);
+                    int num2 = Integer.parseInt(entrada2.getText(), 8);
+                    int r3;
+                    r3 = (num1 * num2);
+                    String d1;
+                    String d2;
+                    String d3;
+
+                    String bi1;
+                    String bi2;
+                    String bi3;
+
+                    String hr1;
+                    String hr2;
+                    String hr3;
+
+                    String oc1;
+                    String oc2;
+                    String oc3;
+                    // conversion
+                    //Binario            
+                    bi1 = Integer.toBinaryString(num1);
+                    bi2 = Integer.toBinaryString(num2);
+                    bi3 = Integer.toBinaryString(r3);
+//Hexadeciaml
+                    hr1 = Integer.toHexString(num1);
+                    hr2 = Integer.toHexString(num2);
+                    hr3 = Integer.toHexString(r3);
+//octal
+                    oc1 = Integer.toOctalString(num1);
+                    oc2 = Integer.toOctalString(num2);
+                    oc3 = Integer.toOctalString(r3);
+                    //decimal
+                    d1 = Integer.toString(num1);
+                    d2 = Integer.toString(num2);
+                    d3 = Integer.toString(r3);
+//Salida            
+
+//decimal
+                    de1.setText(String.valueOf(d1));
+                    de2.setText(String.valueOf(d2));
+                    rd.setText(String.valueOf(d3));
+                    //Binario
+                    b1.setText(String.valueOf(bi1));
+                    b2.setText(String.valueOf(bi2));
+                    rb.setText(String.valueOf(bi3));
+                    //Hexadecimal
+                    h1.setText(String.valueOf(hr1));
+                    h2.setText(String.valueOf(hr2));
+                    rh.setText(String.valueOf(hr3));
+                    //octal
+                    o1.setText(String.valueOf(oc1));
+                    o2.setText(String.valueOf(oc2));
+                    ro.setText(String.valueOf(oc3));
+
+                } else {
+                    JOptionPane.showMessageDialog(null, "Numero No Permitidos", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Numero No Permitidos", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+
+
     }//GEN-LAST:event_multiplicacionActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        resultado.setText("");
-        numero1.setText("");
-        numero2.setText("");
+        rd.setText("");
+        entrada1.setText("");
+        entrada2.setText("");
         rb.setText("");
         b1.setText("");
         b2.setText("");
@@ -933,46 +1534,29 @@ public class ventana extends javax.swing.JFrame {
         h1.setText("");
         h2.setText("");
         rh.setText("");
+        de1.setText("");
+        de2.setText("");
         buttonGroup1.clearSelection();
 
     }//GEN-LAST:event_jButton5ActionPerformed
 
-    private void decimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_decimalActionPerformed
-        b1.setText(String.valueOf(0));
-        b2.setText(String.valueOf(0));
-        o1.setText(String.valueOf(0));
-        o2.setText(String.valueOf(0));
-        h1.setText(String.valueOf(0));
-        h2.setText(String.valueOf(0));
-    }//GEN-LAST:event_decimalActionPerformed
+    private void BaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BaseActionPerformed
+        String tbase = "Seleccione una Base";
+        tbase = Base.getSelectedItem().toString();
 
-    private void binarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_binarioActionPerformed
-        numero1.setText(String.valueOf(0));
-        numero2.setText(String.valueOf(0));
-        o1.setText(String.valueOf(0));
-        o2.setText(String.valueOf(0));
-        h1.setText(String.valueOf(0));
-        h2.setText(String.valueOf(0));
+    }//GEN-LAST:event_BaseActionPerformed
 
-    }//GEN-LAST:event_binarioActionPerformed
+    private void entrada1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrada1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_entrada1ActionPerformed
 
-    private void hexaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hexaActionPerformed
-        numero1.setText(String.valueOf(0));
-        numero2.setText(String.valueOf(0));
-        o1.setText(String.valueOf(0));
-        o2.setText(String.valueOf(0));
-        b1.setText(String.valueOf(0));
-        b2.setText(String.valueOf(0));
-    }//GEN-LAST:event_hexaActionPerformed
+    private void de1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_de1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_de1ActionPerformed
 
-    private void octalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_octalActionPerformed
-        numero1.setText(String.valueOf(0));
-        numero2.setText(String.valueOf(0));
-        h1.setText(String.valueOf(0));
-        h2.setText(String.valueOf(0));
-        b1.setText(String.valueOf(0));
-        b2.setText(String.valueOf(0));
-    }//GEN-LAST:event_octalActionPerformed
+    private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_b1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1010,35 +1594,44 @@ public class ventana extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> Base;
     private javax.swing.JPanel Binarios;
     private javax.swing.JPanel Decimal;
+    private javax.swing.JPanel Decimal1;
     private javax.swing.JPanel Hexadecimal;
     private javax.swing.JPanel Labels;
+    private javax.swing.JPanel Labels1;
     private javax.swing.JPanel Octal;
     private javax.swing.JPanel Operaciones;
     private javax.swing.JTextField b1;
     private javax.swing.JTextField b2;
-    private javax.swing.JRadioButton binario;
     private javax.swing.ButtonGroup buttonGroup1;
-    public javax.swing.JRadioButton decimal;
+    private javax.swing.JTextField de1;
+    private javax.swing.JTextField de2;
     private javax.swing.JButton division;
+    private javax.swing.JTextField entrada1;
+    private javax.swing.JTextField entrada2;
     private javax.swing.JTextField h1;
     private javax.swing.JTextField h2;
-    private javax.swing.JRadioButton hexa;
     private javax.swing.JButton jButton5;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JButton multiplicacion;
     private javax.swing.JLabel nomN1;
     private javax.swing.JLabel nomN2;
-    private javax.swing.JLabel nomN3;
+    private javax.swing.JLabel nomN4;
+    private javax.swing.JLabel nomN5;
+    private javax.swing.JLabel nomN6;
     private javax.swing.JLabel nomh;
-    private javax.swing.JTextField numero1;
-    private javax.swing.JTextField numero2;
     private javax.swing.JTextField o1;
     private javax.swing.JTextField o2;
-    private javax.swing.JRadioButton octal;
     private javax.swing.JTextField rb;
+    private javax.swing.JTextField rd;
     private javax.swing.JButton resta;
-    private javax.swing.JTextField resultado;
     private javax.swing.JTextField rh;
     private javax.swing.JTextField ro;
     private javax.swing.JButton suma;
